@@ -29,7 +29,7 @@ class Pessoa():
 # Entre 35,0 e 40,0 - Obesidade Grau 2
 # Acima de 40 - Obesidade Grau 3
 
-    def acima_20(self, imc, idade):
+    def acima_20(self):
         if self.idade >= 20:
             if imc < 18.5:
                 print('Abaixo do peso ideal')
@@ -50,7 +50,7 @@ class Pessoa():
         return sexo
 
 # Entre 10 e 20 anos: 
-    def entre10e20(self, idade, imc, genero):  
+    def entre10e20(self):  
         if self.idade < 20 and self.idade > 10 : 
             if self.genero() == 'F':
                 if self.idade <= 10:
