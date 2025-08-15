@@ -52,7 +52,7 @@ class Pessoa():
 # Entre 10 e 20 anos: 
     def entre10e20(self):  
         if self.idade < 20 and self.idade > 10 : 
-            if self.genero() == 'F':
+            if genero == 'F':
                 if self.idade <= 10:
                     if imc < 14.23:
                         print('Baixo peso')
@@ -124,7 +124,7 @@ class Pessoa():
                     else:
                         print("Sobrepeso")
 
-            elif self.genero() == 'M':
+            elif genero == 'M':
                 if self.idade <= 10:
                     if imc < 14.42:
                         print('Baixo peso')
@@ -195,7 +195,7 @@ class Pessoa():
                         print('Peso adequado')
                     else:
                         print("Sobrepeso")
-            elif self.genero() == "NB":
+            elif genero == "NB":
                 print('Infelizmente, ainda não há informações cinetíficas para o IMC de adolescentes não bináries.\nEspero que em breve possamos ter melhores infromações.')
 
 
@@ -210,5 +210,6 @@ if idade >= 20:
     quadro = pessoa1.acima_20
     print(quadro)
 else:
+    genero = pessoa1.genero
     quadro = pessoa1.entre10e20
     print(quadro)
