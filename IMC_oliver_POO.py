@@ -44,8 +44,8 @@ class Pessoa:
                 print('Obesidade Grau 3')
 
 # Divisões por sexo:
-    def genero(self, sexo):
-        self.sexo = str(input('Qual seu gênero? Digite F para feminino, M para masculino ou NB para não-binárie'))
+    def genero(self):
+        self.sexo = str(input('Qual seu gênero? Digite F para feminino, M para masculino ou NB para não-binárie: ')).strip().upper()
         return self.sexo
 
 # Entre 10 e 20 anos: 
@@ -60,7 +60,7 @@ class Pessoa:
                     else:
                         print("Sobrepeso")
                 elif self.idade == 11:
-                    if self.imc < 14.60:
+                    if imc < 14.60:
                         print('Baixo peso')
                     elif imc >= 14.60 and imc < 21.18:
                         print('Peso adequado')
@@ -146,7 +146,7 @@ class Pessoa:
                     else:
                         print("Sobrepeso")
                 elif self.idade == 13:
-                    if self.imc < 15.73:
+                    if imc < 15.73:
                         print('Baixo peso')
                     elif imc >= 15.73 and imc < 21.93:
                         print('Peso adequado')
@@ -203,12 +203,12 @@ altura = float(input("Informe a sua altura em metros: "))
 idade = int(input("Informe a sua idade: "))
 
 pessoa1 = Pessoa(peso, altura, idade)
-imc_pessoa1 = pessoa1.imc
+imc_pessoa1 = pessoa1.imc()
 print(f"Seu IMC é {imc_pessoa1}")
 if idade >= 20:
-    quadro = pessoa1.acima_20
+    quadro = pessoa1.acima_20(imc_pessoa1)
     print(quadro)
 else:
-    genero = pessoa1.genero
-    quadro = pessoa1.entre10e20
+    genero = pessoa1.genero()
+    quadro = pessoa1.entre10e20(genero, imc_pessoa1)
     print(quadro)
