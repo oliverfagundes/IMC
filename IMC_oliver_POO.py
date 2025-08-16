@@ -195,7 +195,7 @@ class Pessoa:
                     else:
                         print("Sobrepeso")
             elif genero == "NB":
-                print('Infelizmente, ainda não há informações cinetíficas para o IMC de adolescentes não bináries.\nEspero que em breve possamos ter melhores infromações.')
+                print('Infelizmente, ainda não há informações científicas para o IMC de adolescentes não bináries.\nEspero que em breve possamos ter melhores infromações.')
 
 
 peso = float(input('Informe seu peso em kg: '))
