@@ -7,7 +7,7 @@ Created on Fri Nov 29 18:10:26 2024
 """
 
 # Programa que leia o peso e a altura de uma pessoa e calcule seu massa IMC
-# IMC = peso (em quilos) ÷ altura2 (em metros)
+# IMC = peso (em quilos) ÷ altura**2 (em metros)
 
 peso = float(input('Informe seu peso em kg: '))
 altura = float(input("Informe a sua altura em metros: "))
