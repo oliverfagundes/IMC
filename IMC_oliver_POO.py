@@ -48,155 +48,29 @@ class Pessoa:
         self.sexo = str(input('Qual seu gênero? Digite F para feminino, M para masculino ou NB para não-binárie: ')).strip().upper()
         return self.sexo
 
+# Dicionário com idades: 
+    dic = {'F': {10: [14.23, 20.19], 11: [14.60, 21.18], 12: [14.98, 22.17], 13: [15.36, 23.08], 14: [15.67, 23.88],
+            15: [16.01, 24.29], 16: [16.37, 24.74], 17: [16.59, 25.23], 18: [16.71, 25.56], 19: [16.87, 25.85]},
+            
+            'M': {10: [14.42, 19.60], 11: [14.83, 20.35], 12: [15.24, 21.12], 13: [15.73, 21.93], 14: [16.18, 22.27],
+            15: [16.59, 23.63], 16: [17.01, 24.45], 17: [17.31, 25.28], 18: [17.54, 25.95], 19: [17.80, 26.36]}}
+
 # Entre 10 e 20 anos: 
     def entre10e20(self, genero, imc):  
-        if self.idade < 20 and self.idade > 10 : 
-            if genero == 'F':
-                if self.idade <= 10:
-                    if imc < 14.23:
-                        print('Baixo peso')
-                    elif imc >= 14.23 and imc < 20.19:
-                        print('Peso adequado')
-                    else:
-                        print("Sobrepeso")
-                elif self.idade == 11:
-                    if imc < 14.60:
-                        print('Baixo peso')
-                    elif imc >= 14.60 and imc < 21.18:
-                        print('Peso adequado')
-                    else:
-                        print("Sobrepeso")
-                elif self.idade == 12:
-                    if imc < 14.98:
-                        print('Baixo peso')
-                    elif imc >= 14.98 and imc < 22.17:
-                        print('Peso adequado')
-                    else:
-                        print("Sobrepeso")
-                elif self.idade == 13:
-                    if imc < 15.36:
-                        print('Baixo peso')
-                    elif imc >= 15.36 and imc < 23.08:
-                        print('Peso adequado')
-                    else:
-                        print("Sobrepeso")
-                elif self.idade == 14:
-                    if imc < 15.67:
-                        print('Baixo peso')
-                    elif imc >= 15.67 and imc < 23.88:
-                        print('Peso adequado')
-                    else:
-                        print("Sobrepeso")
-                elif self.idade == 15:
-                    if imc < 16.01:
-                        print('Baixo peso')
-                    elif imc >= 16.01 and imc < 24.29:
-                        print('Peso adequado')
-                    else:
-                        print("Sobrepeso")
-                elif self.idade == 16:
-                    if imc < 16.37:
-                        print('Baixo peso')
-                    elif imc >= 16.37 and imc < 24.74:
-                        print('Peso adequado')
-                    else:
-                        print("Sobrepeso")
-                elif self.idade == 17:
-                    if imc < 16.59:
-                        print('Baixo peso')
-                    elif imc >= 16.59 and imc < 25.23:
-                        print('Peso adequado')
-                    else:
-                        print("Sobrepeso")
-                elif self.idade == 18:
-                    if imc < 16.71:
-                        print('Baixo peso')
-                    elif imc >= 16.71 and imc < 25.56:
-                        print('Peso adequado')
-                    else:
-                        print("Sobrepeso")
-                elif self.idade == 19:
-                    if imc < 16.87:
-                        print('Baixo peso')
-                    elif imc >= 16.87 and imc < 25.85:
-                        print('Peso adequado')
-                    else:
-                        print("Sobrepeso")
-
-            elif genero == 'M':
-                if self.idade <= 10:
-                    if imc < 14.42:
-                        print('Baixo peso')
-                    elif imc >= 14.42 and imc < 19.60:
-                        print('Peso adequado')
-                    else:
-                        print("Sobrepeso")
-                elif self.idade == 11:
-                    if imc < 14.83:
-                        print('Baixo peso')
-                    elif imc >= 14.83 and imc < 20.35:
-                        print('Peso adequado')
-                    else:
-                        print("Sobrepeso")
-                elif self.idade == 12:
-                    if imc < 15.24:
-                        print('Baixo peso')
-                    elif imc >= 15.24 and imc < 21.12:
-                        print('Peso adequado')
-                    else:
-                        print("Sobrepeso")
-                elif self.idade == 13:
-                    if imc < 15.73:
-                        print('Baixo peso')
-                    elif imc >= 15.73 and imc < 21.93:
-                        print('Peso adequado')
-                    else:
-                        print("Sobrepeso")
-                elif self.idade == 14:
-                    if imc < 16.18:
-                        print('Baixo peso')
-                    elif imc >= 16.18 and imc < 22.27:
-                        print('Peso adequado')
-                    else:
-                        print("Sobrepeso")
-                elif self.idade == 15:
-                    if imc < 16.59:
-                        print('Baixo peso')
-                    elif imc >= 16.59 and imc < 23.63:
-                        print('Peso adequado')
-                    else:
-                        print("Sobrepeso")
-                elif self.idade == 16:
-                    if imc < 17.01:
-                        print('Baixo peso')
-                    elif imc >= 17.01 and imc < 24.45:
-                        print('Peso adequado')
-                    else:
-                        print("Sobrepeso")
-                elif self.idade == 17:
-                    if imc < 17.31:
-                        print('Baixo peso')
-                    elif imc >= 17.31 and imc < 25.28:
-                        print('Peso adequado')
-                    else:
-                        print("Sobrepeso")
-                elif self.idade == 18:
-                    if imc < 17.54:
-                        print('Baixo peso')
-                    elif imc >= 17.54 and imc < 25.95:
-                        print('Peso adequado')
-                    else:
-                        print("Sobrepeso")
-                elif self.idade == 19:
-                    if imc < 17.80:
-                        print('Baixo peso')
-                    elif imc >= 17.80 and imc < 26.36:
-                        print('Peso adequado')
-                    else:
-                        print("Sobrepeso")
-            elif genero == "NB":
-                print('Infelizmente, ainda não há informações científicas para o IMC de adolescentes não bináries.\nEspero que em breve possamos ter melhores infromações.')
-
+        if 10 <= self.idade < 20 and genero in self.dic: 
+            limites = self.dic[genero].get(self.idade)
+            if limites:
+                baixo, normal = limites
+                if imc < baixo:
+                    print("Baixo peso")
+                elif baixo <= imc < normal:
+                    print("Peso adequado")
+                else:
+                    print("Sobrepeso")
+            else:
+                print("Idade não encontrada na tabela.")        
+        elif genero == "NB":
+            print('Infelizmente, ainda não há informações científicas para o IMC de adolescentes não bináries.\nEspero que em breve possamos ter melhores informações.')
 
 peso = float(input('Informe seu peso em kg: '))
 altura = float(input("Informe a sua altura em metros: "))
